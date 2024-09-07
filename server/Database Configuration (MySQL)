@@ -1,0 +1,19 @@
+Database Configuration (MySQL)
+
+CREATE DATABASE order_system;
+
+USE order_system;
+
+CREATE TABLE pending_orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    buyer_qty INT NOT NULL,
+    buyer_price DECIMAL(10, 2) NOT NULL,
+    seller_price DECIMAL(10, 2) NOT NULL,
+    seller_qty INT NOT NULL
+);
+
+CREATE TABLE completed_orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    price DECIMAL(10, 2) NOT NULL,
+    qty INT NOT NULL
+);
